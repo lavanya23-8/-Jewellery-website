@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Necklaces</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="bracelets.css">
+</head>
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="image/loggoo.jpg" alt="Jewels Aura Logo">
+        <h2>Jewel Aura</h2>
+    </div>
+    <div class="nav-icons">
+        <form class="search-bar" onsubmit="event.preventDefault(); search();">
+            <input type="search" id="search-input" placeholder="Search for products...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <a href="http://127.0.0.1:5500/home.html" ><i class="fas fa-home"></i> Home</a>
+        <a href="http://127.0.0.1:5500/collections.html" ><i class="fas fa-th-large"></i> Collections</a>
+        <a  onclick="openSidebar('wishlist')"><i class="fas fa-heart"></i> Wishlist</a>
+        <a  onclick="openSidebar('cart')"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="http://127.0.0.1:5500/login2.html"><i class="fas fa-user"></i> Login</a>
+        <a href="http://127.0.0.1:5500/aboutus.html"><i class="fas fa-info-circle"></i>About Us</a> 
+    </div>
+</header>
+<body>
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="product-item">
+            <img src="image/chain.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Nightfall Sparkle gold necklace</h3>
+            <s>$91,000</s> <span class="discounted-price">$89,000</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/chain1.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold geometric evil eye necklace</h3>
+            <s>$98,000</s> <span class="discounted-price">$95,000</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/chain2.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Whimsical wings gold necklace</h3>
+            <s>$96,000</s> <span class="discounted-price">$94,000</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain3.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Cosmic glam gold & stone necklace</h3>
+            <s>$99,642</s> <span class="discounted-price">$97,875</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain4.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Vivacious gold & diamond necklace</h3>
+            <s>$89,864</s> <span class="discounted-price">$88,102</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain5.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Elegant Rivulet gold necklace</h3>
+            <s>$92,638</s> <span class="discounted-price">$91,834</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain6.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Lilac Mist necklace</h3>
+            <s>$56,937</s> <span class="discounted-price">$55,752</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain7.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Radiance of Diamond necklace</h3>
+            <s>$55,835</s> <span class="discounted-price">$54,103</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/chain8.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Mesmerizing Abstract gold necklace</h3>
+            <s>$86,925</s> <span class="discounted-price">$85,945</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/chain9.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Shimmering petals diamond gold necklace</h3>
+            <s>$70,724</s> <span class="discounted-price">$69,356</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain10.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Bloom Silver Sakura Necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain11.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Blooming buds Necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain12.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Crescent layered gold necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain13.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Sparking gold desired necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain14.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Willie Diamond Necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain15.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Ximena Diamond necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain16.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Little Butterfly diamond necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain17.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Stunning gold Necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain18.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Star pendant silver necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain19.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Silver grape pendant necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain90.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Flower link gold plated necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain21.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Halo medallion gold plated necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain22.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl & Star gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain23.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pink heart gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain24.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Tiny diamond gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain25.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Capri gold plated necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain26.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Zodiaco gold necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+            <div class="product-item">
+            <img src="image/chain27.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Bumblebee silver pearl necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain28.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Nugget gold necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain29.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Padua cinque pearl gold necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain30.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Astra Moon pearl gold necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain31.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Tiny Star gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain32.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl silver necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain33.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Butterfly gold plated necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain34.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Piccolo gemstone gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain35.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>The Halo gold necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain36.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Sparkly Lariat gold necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+            <div class="product-item">
+            <img src="image/chain37.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Cube gold plated necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain38.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl flower gold plated necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain39.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Teardrop blue crystal gold necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain40.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Radiant butterfly tassel necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain41.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Vibrant blue silver necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain42.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Zircon heart magnetic clover necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain43.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Cirque necklace </h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain44.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>2 layered necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain45.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Radiant rose gold plated necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain46.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Serpente silver necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div> 
+        <div class="product-item">
+            <img src="image/chain47.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Coin gold plated necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain48.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Black pendant gold plated necklace            </h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain49.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Single pearl gold necklace 
+                </h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain50.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold heart pendant necklace 
+        </h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain51.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold heart pendant necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain52.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold butterfly necklace
+            </h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain53.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Multicolour teardrop necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain54.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Circle pendant gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain55.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Grey pendant necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain56.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Linked Flowers pendant silver necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain57.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Crystal layered pearl necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain58.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Dazzling Silver Star necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain59.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Purple crystal silver necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain60.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Dark blue teardrop pendant silver necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain61.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Clove pendants gold plated necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain62.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Large pearl pendant gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain63.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Triple heart gold plated necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain64.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Star of David silver necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain65.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Triple heart gold plated necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain66.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Big white stone gold necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain67.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>2 layered with stone gold necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain68.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Multi beads gold necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Classic Necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div><div class="product-item">
+            <img src="image/chain70.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pink classic necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain71.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Diamond pink gemstone necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain72.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Black Stone Necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain73.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Classic Necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain74.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Multicharm gold plated necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain75.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Double pendant gold plated necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain76.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Time border necklace </h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain77.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Cheer gold short necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain78.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Ari Heart gold necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain79.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl & Gemstone necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain80.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Long Beaded rope necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain81.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Love pendant silver necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain82.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold plated Shell necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain83.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Diamante heart gold plated necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain84.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Teardrop gold necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain85.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold flower pendant necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain86.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Bow silver Necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain87.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Ray heart pendant gold necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain88.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Layered bead necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain89.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Aventurine gold plated necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain90.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Flower link gold plated necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain91.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Triple pearl chain necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain92.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Dragonfly silver necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain93.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gem disc station necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain94.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold plated stationed bead necklace</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain95.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Teardrop gold necklace</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain96.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gemstone Chain Necklace</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+            <div class="product-item">
+            <img src="image/chain97.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Catalina Pearl Necklace</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain98.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl & gold flower pendant necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain99.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Ball Chain</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/chain100.jpg" alt="necklaces">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Diamond Solitaire Gold Necklace</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+    </section>
+    <div class="search-container"> 
+        <div id="results"></div> </div> 
+   <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <span class="closebtn" onclick="closeSidebar()">&times;</span>
+    <div id="sidebar-content">
+        <div id="wishlist-content" style="display: none;"></div>
+        <div id="cart-content" style="display: none;"></div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h4>Discover Jewel Aura</h4>
+            <p>Exquisite imitation jewelry for every occasion.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Customer Care</h4>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/collections.html">Shop By Category</a></li>
+                <li><a href="http://127.0.0.1:5500/bestseller.html">Best Sellers</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+</body>
+<script src="collections.js" >
+</script>
+</html>

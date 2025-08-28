@@ -1,0 +1,207 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #f6e58d, #f9ca24);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 50px 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 100px;
+    margin-right: 30px;
+    border-radius: 80%;
+    border: 3px solid #f39c12;
+}
+
+header .logo h2 {
+    font-size: 50px;
+    color: #333;
+}
+/* Section Styling */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f8fa;
+    padding-top: 100px; /* Adjusted to not overlap with fixed header */
+}
+
+/* Base Container */
+.base {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.base:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Form */
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+.toggle-password {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+.toggle-password:hover {
+    color: #3498db;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Forgot Password Link */
+.forgot {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.forgot:hover {
+    color: #2980b9;
+}
+
+/* Error Message */
+#error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.footer-section p{
+    font-size: 20px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+       section {
+        padding-top: 80px;
+    }
+
+    .base {
+        padding: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+       footer {
+        padding: 20px 10px;
+    }
+}

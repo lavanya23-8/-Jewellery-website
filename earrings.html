@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="bracelets.css">
+</head>
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="image/loggoo.jpg" alt="Jewels Aura Logo">
+        <h2>Jewel Aura</h2>
+    </div>
+    <div class="nav-icons">
+        <form class="search-bar" onsubmit="event.preventDefault(); search();">
+            <input type="search" id="search-input" placeholder="Search for products...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <a href="http://127.0.0.1:5500/home.html" ><i class="fas fa-home"></i> Home</a>
+        <a href="http://127.0.0.1:5500/collections.html" ><i class="fas fa-th-large"></i> Collections</a>
+        <a  onclick="openSidebar('wishlist')"><i class="fas fa-heart"></i> Wishlist</a>
+        <a  onclick="openSidebar('cart')"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="http://127.0.0.1:5500/login2.html"><i class="fas fa-user"></i> Login</a>
+        <a href="http://127.0.0.1:5500/aboutus.html"><i class="fas fa-info-circle"></i>About Us</a> 
+    </div>
+</header>
+
+
+    <!-- Product Section -->
+    <section class="products">
+        <div class="product-item">
+            <img src="image/ear.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Enchanting Warli gold earrings</h3>
+            <s>$91,000</s> <span class="discounted-price">$89,000</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ear1.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Mia crystal earrings</h3>
+            <s>$98,000</s> <span class="discounted-price">$95,000</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ear2.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Wembly gold earrings</h3>
+            <s>$96,000</s> <span class="discounted-price">$94,000</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear3.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Crochet gold & diamond earrings</h3>
+            <s>$99,642</s> <span class="discounted-price">$97,875</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear4.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Serene sunlit pearl & diamond drop earrings</h3>
+            <s>$89,864</s> <span class="discounted-price">$88,102</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear5.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Butterfly earrings</h3>
+            <s>$92,638</s> <span class="discounted-price">$91,834</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear6.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Curled grace gold earrings</h3>
+            <s>$56,937</s> <span class="discounted-price">$55,752</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear7.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Woven elegance gold earrings</h3>
+            <s>$55,835</s> <span class="discounted-price">$54,103</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/ear8.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Heartfelt gold earrings</h3>
+            <s>$86,925</s> <span class="discounted-price">$85,945</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+            
+        </div>
+        <div class="product-item">
+            <img src="image/ear9.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Yellow gold drop earrings</h3>
+            <s>$70,724</s> <span class="discounted-price">$69,356</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear10.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Lippan radiance gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear11.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Retro rhythm gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear12.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Electric vibes gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear13.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Waterfall crystal gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear14.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Bloom silver earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear15.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pashmina Zeenat earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear16.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Voylla silver toned earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear17.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Rose gold plated earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear18.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Flower stone gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear19.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Zariyah gold plated earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear20.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Elmire diamond earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear21.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl diamond drop gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear22.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Yellow gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear23.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Estele gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear24.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Princess Crown gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear25.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Conjunto gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear26.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pulseria gold earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+            <div class="product-item">
+            <img src="image/ear27.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Sia Art gold earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear28.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Syotri heart gold earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear29.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Green emerald earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear30.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>The floating leaf gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear31.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Vine pearl gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear32.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Perrian gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear33.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Cosmo red Stone earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear34.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Mozes gold drop earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear35.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Hidden Secrets earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear36.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Weary green earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+            <div class="product-item">
+            <img src="image/ear37.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Citrine earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear38.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pink stone gold earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear39.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Sarah lavender crystal earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear40.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Dakaria gold drop earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear41.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gadgil drop gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear42.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Kendall gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear43.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Daisy earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear44.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Grapes stud earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear45.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Large pearls drop earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear46.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Drop stars white gold earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div> 
+        <div class="product-item">
+            <img src="image/ear47.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Drop blue dangle earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear48.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Nistra elegant earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear49.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>The Dimpsy gold earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear50.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Drop Violet dangle earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear51.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Le Soonar Earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear52.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Clara pearl gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear53.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Silver crystal earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear54.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Eshvi black onyx earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear55.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear56.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold teardrop earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear57.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Crystal gold stud earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear58.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear59.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearl gold flower drop earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear60.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold ring stud earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear61.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold and pearl drop earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear62.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Crystal stone silver earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear63.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Duo pearl earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear64.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Half hoop earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear65.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Demi thunder gold plated earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear66.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Lavender combo earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear67.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>White galaxy earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear68.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Circular half hoop earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear69.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold flower earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div><div class="product-item">
+            <img src="image/ear70.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Minimal hoop earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear71.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Wave earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear72.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Dainty pearl earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear73.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Big brass godl earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear74.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Spiral earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear75.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Huggies gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear76.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold plated drop earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear77.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Rose drop earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear78.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Daisy hoops earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear79.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold bow hoop earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear80.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Lily drop earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear81.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Cherry kiss earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear82.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Simple butterfly stud earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear83.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Humaria pearl earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear84.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Diamond dangle earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear85.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold toned drop earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear86.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold flower stud earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear87.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Gold thin hoop earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear88.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Disc Earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear89.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Round planet gold earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear90.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pomellato nudo earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear91.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Blondi gold earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear92.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Violet nudo earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear93.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Designer earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear94.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Catene silver earrings</h3>
+                <s>$19.99</s> <span class="discounted-price">$9.99</span>
+                <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear95.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Iconia rose gold earrings</h3>
+            <s>$19.99</s> <span class="discounted-price">$9.99</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear96.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Anvik gold earrings</h3>
+            <s>$97,635</s> <span class="discounted-price">$98,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+            <div class="product-item">
+            <img src="image/ear97.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Silver flower earrings</h3>
+            <s>$90,926</s> <span class="discounted-price">$89,999</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear98.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Versatile silver earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear99.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Devin rose oval gold earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+        <div class="product-item">
+            <img src="image/ear100.jpg" alt="ears">
+            <i class="fas fa-heart like-icon" onclick="toggleLike(this)"></i>
+            <h3>Pearls heart earrings</h3>
+            <s>$68,835</s> <span class="discounted-price">$97,936</span>
+            <button class="add" onclick="addItem(this, 'cart')"><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button class="wishlist" onclick="addItem(this, 'wishlist')"><i class="fas fa-heart"></i> Wishlist</button>
+        </div>
+    </section>
+    <div class="search-container"> 
+        <div id="results"></div> </div> 
+   <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <span class="closebtn" onclick="closeSidebar()">&times;</span>
+    <div id="sidebar-content">
+        <div id="wishlist-content" style="display: none;"></div>
+        <div id="cart-content" style="display: none;"></div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h4>Discover Jewel Aura</h4>
+            <p>Exquisite imitation jewelry for every occasion.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Customer Care</h4>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/collections.html">Shop By Category</a></li>
+                <li><a href="http://127.0.0.1:5500/bestseller.html">Best Sellers</a></li>
+            </ul>
+        </div>
+        
+    </footer>
+</body>
+<script src="collections.js" >
+</script>
+</html>

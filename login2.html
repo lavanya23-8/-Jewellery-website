@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewels Aura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="login2.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="image/loggoo.jpg" alt="Jewels Aura Logo">
+            <h2>Jewels Aura</h2>
+        </div>
+    </header>
+    <section>
+        <div class="base">
+            <h1>Login</h1>
+            <form id="loginForm" onsubmit="return handleLogin(event);">
+                <div class="form-group">
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Username" class="div2" id="username" required />
+                </div>
+                <div class="form-group">
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye-slash " id="eye-icon"></i>
+                    </span>
+                    <!-- <div id="forgot-password" class="forgot">Forgot your password?</div>  -->
+                </div>
+                <button type="submit" class="div5">Login</button>
+            </form>
+            <div id="error-message" class="error message"></div>
+        </div>
+    </section>
+    
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+        <h4>Discover Jewel Aura</h4>
+        <p>Exquisite imitation jewelry for every occasion.Explore a variety of collections, including necklaces, bracelets, rings, earrings, and more, crafted with precision and attention to detail. Whether you prefer minimalistic elegance or bold statement pieces, jewellery offers something for every occasion. Discover how our unique designs can help you express your story through the art of adornment.</p>
+    </div>
+</footer>
+</body>
+<script src="Login2.js" >
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="collections.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="image/loggoo.jpg" alt="Jewels Aura Logo">
+            <h2>Jewel Aura</h2>
+        </div>
+        <div class="nav-icons">
+            <form class="search-bar" onsubmit="event.preventDefault(); search();">
+                <input type="search" id="search-input" placeholder="Search for products...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <a href="http://127.0.0.1:5500/home.html" ><i class="fas fa-home"></i> Home</a>
+            <a href="http://127.0.0.1:5500/collections.html" ><i class="fas fa-th-large"></i> Collections</a>
+            <a  onclick="openSidebar('wishlist')"><i class="fas fa-heart"></i> Wishlist</a>
+            <a  onclick="openSidebar('cart')"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="http://127.0.0.1:5500/login2.html"><i class="fas fa-user"></i> Login</a>
+            <a href="http://127.0.0.1:5500/aboutus.html"><i class="fas fa-info-circle"></i>About Us</a> 
+        </div>
+    </header>
+    <!-- Accessories Section -->
+    <section id="accessories" class="sec3">
+        <h2>Our Accessories</h2>
+        <div class="accessories-container">
+            <div class="accessory-category">
+                <img src="image/our1.jpg" alt="Bracelets">
+                <h3>Bracelets</h3>
+                <p>Elegant and stylish bracelets for every occasion.</p>
+                <a href="http://127.0.0.1:5500/bracelets.html" class="cta-button">Shop Now</a>
+            </div>
+            <div class="accessory-category">
+                <img src="image/our4.jpg" alt="Necklaces">
+                <h3>Necklaces</h3>
+                <p>Beautiful necklaces to complement your style.</p>
+                <a href="http://127.0.0.1:5500/necklaces.html" class="cta-button">Shop Now</a>
+            </div>
+            <div class="accessory-category">
+                <img src="image/our3.jpg" alt="Earrings">
+                <h3>Earrings</h3>
+                <p>Stunning earrings for a touch of elegance.</p>
+                <a href="http://127.0.0.1:5500/earrings.html" class="cta-button">Shop Now</a>
+            </div>
+            <div class="accessory-category">
+                <img src="image/our2.jpg" alt="Rings">
+                <h3>Rings</h3>
+                <p>Exquisite rings to add sparkle to your look.</p>
+                <a href="http://127.0.0.1:5500/ring.html" class="cta-button">Shop Now</a>
+            </div>
+        </div>
+    </section>
+   
+   <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <span class="closebtn" onclick="closeSidebar()">&times;</span>
+    <div id="sidebar-content">
+        <div id="wishlist-content" style="display: none;"></div>
+        <div id="cart-content" style="display: none;"></div>
+    </div>
+</div>
+    <div class="search-container"> 
+        <div id="results"></div> </div> 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h4>Discover Jewel Aura</h4>
+            <p>Exquisite imitation jewelry for every occasion.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Customer Care</h4>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/collections.html">Shop By Category</a></li>
+                <li><a href="http://127.0.0.1:5500/bestseller.html">Best Sellers</a></li>
+            </ul>
+        </div>
+            </footer>
+    <script src="collections.js"></script>
+</body>
+</html>
