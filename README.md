@@ -17,7 +17,7 @@ It focuses on creating a modern, attractive, and responsive website for a jewell
 
  Contact form for customer inquiries
 
- Fully responsive layout (works on mobile, tablet, and desktop)
+ Fully responsive layout (works on mobile, tablets, and desktop)
 
  Smooth navigation and modern UI design
 
