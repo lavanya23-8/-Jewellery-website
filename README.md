@@ -7,7 +7,7 @@ A responsive and elegant frontend web application for an online jewellery shop. 
 This project is designed as part of a Web Development Internship at Websort, Bengaluru.
 It focuses on creating a modern, attractive, and responsive website for a jewellery business using core web technologies.
 
-# Features
+# Features.
 
  Elegant and responsive homepage design
 
