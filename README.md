@@ -22,7 +22,7 @@ It focuses on creating a modern, attractive, and responsive website for a jewell
  Smooth navigation and modern UI design
 
 
- # Technologies Used
+ # Technologies Used.
 Category	Tools / Technologies
 Frontend--	HTML5, CSS3, JavaScript
 Styling	--  CSS Flexbox, Media Queries
