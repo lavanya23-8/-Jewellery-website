@@ -1,11 +1,11 @@
 # -Jewellery-website
-# Jewellery Shop Website
+# Jewellery Shop Website 
 
-A responsive and elegant frontend web application for an online jewellery shop. The website showcases beautiful jewellery collections, provides product details, and includes an interactive and user-friendly interface designed for an excellent customer experience....
+A responsive and elegant frontend web application for an online jewellery shop. The website showcases beautiful jewellery collections, provides product details, and includes an interactive and user-friendly interface designed for an excellent customer experience.
 
  ### Project Overview.
 This project is designed as part of a Web Development Internship at Websort, Bengaluru.
-It focuses on creating a modern, attractive, and responsive website for a jewellery business using core web technologies...
+It focuses on creating a modern, attractive, and responsive website for a jewellery business using core web technologies.
 
 # Features.
 
